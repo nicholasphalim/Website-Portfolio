@@ -20,9 +20,9 @@ export default function Home() {
           <hr className=" w-full mt-2 transparent border-tertiary"></hr>
           
           <div className="flex p-3 justify-items-center ">
-            <Contacts href="https://github.com/nicholasphalim" src="/github.svg"/>
-            <Contacts href="https://instagram.com/nicholasphalim" src="/instagram.svg"/>
-            <Contacts href="https://www.linkedin.com/in/nicholasphalim" src="/linkedin.svg"/>
+            <Contacts href="https://github.com/nicholasphalim" src="/github.svg" alt="Github Icon"/>
+            <Contacts href="https://instagram.com/nicholasphalim" src="/instagram.svg" alt="Instagram Icon"/>
+            <Contacts href="https://www.linkedin.com/in/nicholasphalim" src="/linkedin.svg" alt="LinkedIn Icon"/>
           </div>
           <div className="">
             <p className="text-center text-tertiary mt-10">A second year ITB student studying <b>Information Systems and Technology</b>, with a high interest in Software Development.</p>
