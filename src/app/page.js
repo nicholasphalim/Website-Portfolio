@@ -4,6 +4,7 @@ import githubLogo from "../../public/github.svg"
 import linkedInLogo from "../../public/linkedin.svg"
 import instagramLogo from "../../public/instagram.svg"
 import Contacts from "./components/Contacts"
+import Email from "./components/Email"
 
 export default function Home() {
   return (
@@ -20,9 +21,10 @@ export default function Home() {
           <hr className=" w-full mt-2 transparent border-tertiary"></hr>
           
           <div className="flex p-3 justify-items-center ">
-            <Contacts href="https://github.com/nicholasphalim" src="/github.svg" alt="Github Icon"/>
-            <Contacts href="https://instagram.com/nicholasphalim" src="/instagram.svg" alt="Instagram Icon"/>
-            <Contacts href="https://www.linkedin.com/in/nicholasphalim" src="/linkedin.svg" alt="LinkedIn Icon"/>
+            <Email></Email>
+            <Contacts href="https://github.com/nicholasphalim" src="/github.svg" alt="Github Icon" width={30} height={30}/>
+            <Contacts href="https://instagram.com/nicholasphalim" src="/instagram.svg" alt="Instagram Icon"  width={30} height={30}/>
+            <Contacts href="https://www.linkedin.com/in/nicholasphalim" src="/linkedin.svg" alt="LinkedIn Icon"  width={30} height={30}/>
           </div>
           <div className="">
             <p className="text-center text-tertiary mt-10">A second year ITB student studying <b>Information Systems and Technology</b>, with a high interest in Software Development.</p>
