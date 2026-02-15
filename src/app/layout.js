@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Nicho's Portfolio Website",
+  title: "Nicho's Personal Website",
   description: "Portfolio Website of Nicholas Putra Halim, showcasing skills and projects.",
 };
 
