@@ -1,3 +1,5 @@
+'use client'
+import { easeInOut, motion, reverseEasing } from "motion/react"
 import Image from "next/image";
 import Categories from "./components/Categories"
 import Contacts from "./components/Contacts"
@@ -11,10 +13,15 @@ export default function Home() {
 
         {/* Intro */}
         <div className="h-screen flex flex-col justify-center items-center mb-30">
-          <h1 className="text-2xl text-center font-medium mb-2 ml-5 text-shadow-lg ">Hello World <span className="inline-block motion-rotate-loop-30">👋</span>!</h1>
+          <h1 className="text-2xl text-center font-medium mb-2 ml-5 text-shadow-lg ">Hello World&nbsp;
+            <motion.span 
+              animate={{rotate: [-20, 20]}} 
+              transition={{repeat: Infinity, duration: 0.9, repeatType: "reverse", ease: "easeInOut"}} 
+              className="inline-block origin-center">👋
+            </motion.span>!</h1>
           <div className="text-shadow-md flex-col flex p-5 border-5 border-double rounded-xl">
             <img src='/fotodiri.jpeg' alt="Foto Diri" width={250} className="rounded-3xl my-3 mx-auto shadow-md"></img>
-            <h2 className="text-3xl font-bold leading-13"><span className="text-2xl font-medium text-shadow-none">I'm</span> Nicholas Halim</h2>
+            <h2 className="text-2xl font-medium text-shadow-none">I'm <span className="text-3xl font-bold leading-13 text-shadow-md">Nicholas Halim</span></h2>
             <p className="text-gray-400 text-shadow-none">📍Bandung, Indonesia</p>
             <p className="text-tertiary mt-3">A second year ITB student studying <b>Information Systems and Technology</b>, with a high interest in Software Engineering.</p>
           </div>
