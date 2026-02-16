@@ -1,21 +1,28 @@
 'use client'
+import { motion } from "motion/react"
 import { useState } from "react";
 import Image from "next/image";
 
 export default function Header(){
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [clicked, setClicked] = useState(false);
 
     return(
-        <div className="w-full flex flex-col bg-foreground shadow-xl px-2 font-mono">
+        <div className="w-full flex flex-col bg-foreground shadow-xl px-2 font-mono [user-drag:none]">
 
             {/* Main Header */}
             <div className="flex justify-between px-8">
                 <div className="m-2 flex items-center">
-                    <img onClick={() => setIsOpen(!isOpen)} src="/menulogo.svg" width={25}  className="transition-transform duration-500"></img>
+                    <img onClick={() => setIsOpen(!isOpen)} src="/menulogo.svg" width={25}  className=" drag select-none transition-transform duration-500 [user-drag:none]"></img>
                 </div>
                 <div className="m-2">
-                    <img src='/favicon.ico' width={40} className=""></img>
+                    <motion.img src='/favicon.ico' width={40} 
+                        onClick={() => setClicked(!clicked)}
+                        animate={clicked ? {scale: [1, 1.2, 1], rotate: [0, 30, -30, 0]} : {rotate: 0}}
+                        transition={{duration: 0.5}}
+                        className="select-none">
+                    </motion.img>
                 </div>
 
             </div>
